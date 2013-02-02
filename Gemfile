@@ -5,7 +5,6 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
 gem 'octokit'
 
 # Gems used only for assets and not required
@@ -18,6 +17,15 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :production do
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
+  gem 'heroku'
 end
 
 gem 'jquery-rails'
