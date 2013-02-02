@@ -1,4 +1,6 @@
 LoveRequest::Application.routes.draw do
+  root to: "users#new"
+
   devise_for :users
 
   resources :users, only: [:index, :show, :new, :create]
