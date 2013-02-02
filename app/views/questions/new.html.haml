@@ -5,6 +5,11 @@
   .control-group#add_question
     .controls
       .btn.btn-warning 質問を追加
+  .question_box
+    .control-group
+      %label.control-label 合格点
+      %input{ type: "number", style: "margin-left:50px;width:50px;", name: "passing_point" }
+      %span 点
   .control-group
     .controls
       %button.btn.btn-success 作成
