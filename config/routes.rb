@@ -14,12 +14,12 @@ end
 
 
 #== Route Map
-# Generated on 03 Feb 2013 04:50
+# Generated on 03 Feb 2013 05:41
 #
-# user_omniauth_authorize      /users/auth/:provider(.:format)        devise/omniauth_callbacks#passthru {:provider=>/github/}
-#  user_omniauth_callback      /users/auth/:action/callback(.:format) devise/omniauth_callbacks#(?-mix:github)
+#    destroy_user_session GET  /users/sign_out(.:format)              devise/sessions#destroy
+# user_omniauth_authorize      /users/auth/:provider(.:format)        omniauth_callbacks#passthru {:provider=>/github/}
+#  user_omniauth_callback      /users/auth/:action/callback(.:format) omniauth_callbacks#(?-mix:github)
 #                   users GET  /users(.:format)                       users#index
-#                         POST /users(.:format)                       users#create
 #                new_user GET  /users/new(.:format)                   users#new
 #                    user GET  /users/:id(.:format)                   users#show
 #         travis_callback      /travis/callback(.:format)             travis#callback
