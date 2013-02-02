@@ -10,7 +10,8 @@ $ ->
     add_el = target_el.after(_.template($("#answer_add_template").html(), {})).next()
     add_answer = ->
       add_el.before(_.template($("#answer_form_template").html(), {}))
-      add_el.prev().find("input[type=text]").attr("name", "answer"+this_number+"[]")
+      add_el.prev().find("input[type=text]").attr("name", "answers"+this_number+"[]")
+      add_el.prev().find("input[type=number]").attr("name", "points"+this_number+"[]")
     delete_question = ->
       target_el.parent().remove()
     delete_answer = ->
