@@ -1,0 +1,33 @@
+%h3 理想の人の条件を作成してください
+%div 選択した項目の点数を加算して、判断します。
+
+%form{ class: "form-horizontal", id: "form", style: "margin-top:50px;", action: new_spec_path, method: "POST" }
+  .control-group#add_question
+    .controls
+      .btn.btn-warning 質問を追加
+  .control-group
+    .controls
+      .btn.btn-success 作成
+
+%script{ id: "question_form_template", type: "text/template" }
+  .question_box
+    .control-group
+      %label.control-label 質問を入力してください
+      %input{ type: "text", style: "margin-left:50px;width:500px;" }
+
+%script{ id: "answer_form_template", type: "text/template" }
+  .control-group
+    .controls
+      %input{ type: "radio", disabled: true }
+      %input{ type: "text", style: "margin-left:14px;" }
+      %input{ type: "number", style: "margin-left:14px;width:50px;" }
+      %span 点
+
+%script{ id: "answer_add_template", type: "text/template" }
+  .control-group.add
+    .controls
+      .btn.add_answer 解答を追加
+      .btn.btn-danger.delete_question 質問を削除
+      .btn.btn-danger.delete_answer 最後の解答を削除
+
+
