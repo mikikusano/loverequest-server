@@ -60,7 +60,7 @@ LoveRequest::Application.routes.draw do
 
   match 'travis/callback' => 'travis#callback'
 
-  resources :spec, only: [:new, :create]
+  resources :question, only: [:new, :create]
 end
 
 
