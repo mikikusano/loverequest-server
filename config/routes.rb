@@ -59,6 +59,8 @@ LoveRequest::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   match 'travis/callback' => 'travis#callback'
+
+  resources :spec, only: [:new, :create]
 end
 
 
