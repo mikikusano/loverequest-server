@@ -1,9 +1,11 @@
 LoveRequest::Application.routes.draw do
   root to: "users#new"
 
-  devise_for :users
+  devise_for :users, controllers: { sessions: "sessions", omniauth_callbacks: "omniauth_callbacks" } do
+    get '/users/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
 
-  resources :users, only: [:index, :show, :new, :create]
+  resources :users, only: [:index, :show, :new]
 
   match 'travis/callback' => 'travis#callback'
 

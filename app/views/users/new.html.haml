@@ -1,2 +1,8 @@
-%h1 Users#new
-%p Find me in app/views/users/new.html.haml
+%h3 GitHubのアカウントを用意したら下のボタンを押して下さい
+%div 彼氏にしたい人の条件を指定して、githubユーザーからのアプローチを待つことができます
+
+= link_to "GitHubでログイン", user_omniauth_authorize_path(:github)
+
+%p
+  もしくは
+  = link_to "他の利用者を見る", users_path
