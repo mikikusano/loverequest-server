@@ -12,17 +12,23 @@ class TravisController < ActionController::Base
       now_state = pull_request["state"]
       base = pull_request["base"]
       head = pull_request["head"]
-      if base["ref"] != "gh-page" || now_state != "open"
-        return
+      if base["ref"] != "gh-pages" || now_state != "open"
+        next
       end
       if branch == head["ref"]
         number = pull_request["number"]
       end
     end
 
-    if data["status_message"] == "Broken"
-      client.update_pull_request(Rails.configuration.ref, number, "bye", "low score", "closed")
-    elsif data["status_message"] == "Passed"
+    if number.nil?
+      render json: {text: "fail"}
+      return
+    end
+
+    if payload["status_message"] == "Broken"
+      client.add_comment(Rails.configuration.ref, number, "bye")
+      client.update_pull_request(Rails.configuration.ref, number, nil, nil, "closed")
+    elsif payload["status_message"] == "Passed"
       client.merge_pull_request(Rails.configuration.ref, number)
     end
     render json: {text: "success", number: number, branch: branch}
