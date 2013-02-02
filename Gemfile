@@ -26,6 +26,10 @@ end
 group :development do
   gem 'sqlite3'
   gem 'heroku'
+  gem 'pry-rails'
+  gem 'pry-nav'
+  gem 'pry-doc'
+  gem 'pry-remote'
 end
 
 gem 'jquery-rails'
