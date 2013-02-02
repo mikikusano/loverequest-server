@@ -12,6 +12,10 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails-backbone'
 
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
