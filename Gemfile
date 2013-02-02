@@ -38,6 +38,7 @@ group :production do
 end
 
 group :development do
+  gem 'annotate'
   gem 'sqlite3'
   gem 'heroku'
   gem 'pry-rails'
