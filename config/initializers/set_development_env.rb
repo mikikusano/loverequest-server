@@ -7,3 +7,4 @@ if Rails.env.development?
       ENV[key] = val
     end
   end
+end
