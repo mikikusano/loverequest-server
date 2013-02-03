@@ -32,17 +32,21 @@ $ ->
   $("#add_question .btn").click add_question
 
   questions = [
-    {question: "質問1", answers: [
-      {answer:"解答1", point: 3},
-      {answer:"解答2", point: 2}
+    {question: "デートはどこで遊びたいですか？", answers: [
+      {answer:"映画館", point: 2},
+      {answer:"カラオケ", point: -1},
+      {answer:"解答2", point: 2},
+      {answer:"解答2", point: 2},
       ]
     },
     {question: "質問2", answers: [
       {answer:"解答1", point: 3},
-      {answer:"解答2", point: 2}
+      {answer:"解答2", point: 1},
+      {answer:"解答2", point: 2},
+      {answer:"解答2", point: 2},
       ]
     }
-    ]
+  ]
 
   for question in questions
     add_question(question)
