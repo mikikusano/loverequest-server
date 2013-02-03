@@ -35,18 +35,31 @@ $ ->
     {question: "デートはどこで遊びたいですか？", answers: [
       {answer:"映画館", point: 2},
       {answer:"カラオケ", point: -1},
-      {answer:"解答2", point: 2},
-      {answer:"解答2", point: 2},
+      {answer:"遊園地", point: 1},
+      {answer:"家", point: 0},
       ]
     },
-    {question: "質問2", answers: [
-      {answer:"解答1", point: 3},
-      {answer:"解答2", point: 1},
-      {answer:"解答2", point: 2},
-      {answer:"解答2", point: 2},
+    {question: "どんな性格がいいですか？", answers: [
+      {answer:"優しい", point: 2},
+      {answer:"面白い", point: 1},
+      {answer:"可愛い", point: -1},
+      {answer:"静か", point: 0},
       ]
     }
-  ]
+    {question: "facebookの友人は何人いますか？", answers: [
+      {answer:" 150人以下", point: -1},
+      {answer:" 150人以上", point: 1},
+      {answer:" 500人以上", point: 2},
+      {answer:" 1000人以上", point: 1},
+      ]
+    }
+    {question: "私の好きな食べ物は何でしょうか？", answers: [
+      {answer:" チョコ", point: -1},
+      {answer:" はちみつ梅干し", point: 2},
+      {answer:" ケンタッキーフライドチキン", point: -2},
+      {answer:" いちご", point: 1},
+      ]
+    }
 
   for question in questions
     add_question(question)
