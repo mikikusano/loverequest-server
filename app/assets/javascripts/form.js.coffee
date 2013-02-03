@@ -15,7 +15,7 @@ $ ->
       add_el.prev().find("input[type=number]").attr("name", "points"+this_number+"[]")
       if answer
         add_el.prev().find("input[type=text]").val(answer.answer)
-        add_el.prev().find("input[type=number]").val(answer.number)
+        add_el.prev().find("input[type=number]").val(answer.point)
     delete_question = ->
       target_el.parent().remove()
     delete_answer = ->
