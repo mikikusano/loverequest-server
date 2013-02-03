@@ -4,7 +4,8 @@ class TravisController < ActionController::Base
     branch = payload["branch"]
     author_name = payload["author_name"]
 
-    client = Octokit::Client.new(:login => Rails.configuration.user, :password => Rails.configuration.password)
+
+    client = current_user.octokit
     pull_requests = client.pull_requests(Rails.configuration.ref)
 
     number = nil
